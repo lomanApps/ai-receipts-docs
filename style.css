@@ -176,10 +176,16 @@ h1 {
 
 .feature-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
     justify-content: center;
     align-items: stretch;
+}
+
+@media (min-width: 1024px) {
+    .feature-grid {
+        grid-template-columns: repeat(4, 1fr); /* Force 4 columns on desktop */
+    }
 }
 
 .feature-card {
